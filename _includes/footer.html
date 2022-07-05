@@ -1,18 +1,33 @@
 <footer class="container-fluid bg-dark text-light mt-5 p-5">
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-6 col-md-3">
+    <div class="col-12 col-sm-6 col-md-4">
       <h5>About</h5>
       <p class="m-1">{{ site.description }}</p>
     </div>
-    <div class="col-12 col-sm-6 col-md-3">
-      <h5>Quick Links</h5>
-      {% for page in site.pages %}
-      {% if page.title %}
-      <div class="nav-item m-1">
-        <a class="link-primary text-decoration-none" href="{{ page.url }}">{{ page.title }}</a>
+    <div class="col-12 col-sm-6 col-md-4">
+      <h5>Contact</h5>
+      <div class="m-1">
+        <div class="my-2"><a class="link-light text-decoration-none" href="tel:+17402158990">
+            <img src="https://api.iconify.design/bi/telephone.svg?color=white" alt="" class="d-inline">
+            (740) 215-8990</a>
+        </div>
+        <div class="my-2"><a class="link-light text-decoration-none" href="mailto:neffcut@yahoo.com">
+            <img src="https://api.iconify.design/bi/envelope-paper.svg?color=white" alt="" class="d-inline">
+            neffcut@yahoo.com</a>
+        </div>
+        <div class="my-2">
+          <div class="card d-inline-block m-1">
+            <a href="https://www.facebook.com/Neffcut" target="blank">
+              <img src="/assets/brands/facebook-logo.png" alt="facebook" height="33px">
+            </a>
+          </div>
+          <div class="card d-inline-block m-1">
+            <a href="https://m.me/Neffcut" target="blank">
+              <img src="/assets/brands/messenger-logo.svg" alt="messenger" height="33px">
+            </a>
+          </div>
+        </div>
       </div>
-      {% endif %}
-      {% endfor %}
     </div>
   </div>
 </footer>
