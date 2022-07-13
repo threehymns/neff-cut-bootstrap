@@ -12,8 +12,8 @@ permalink: /gallery/
         file.extname,"" %}
         <div class="col-10 {% if filename contains 'wide' %}col-sm-12 col-md-8 col-lg-6 col-xl-4{% else %}col-sm-6 col-md-4 col-lg-3 col-xl-2{% endif %} g-2">
             <a type="button" class="w-100" href="{{ file.path | relative_url }}" title="{{ filename }}"
-                data-bs-toggle="modal" data-bs-target="#modalImage{{ forloop.index }}"><img
-                    class="w-100 rounded-3" src="{{ file.path }}" alt="{{ filename }}" title="{{ filename }}" /></a>
+                data-bs-toggle="modal" data-bs-target="#modalImage{{ forloop.index }}">
+                <img loading="lazy" style="min-height: 200px;" class="w-100 rounded-3" src="{{ file.path }}" alt="{{ filename }}" title="{{ filename }}" /></a>
         </div>
         {% endif %}{% endif %}{% endfor %}
     </div>
@@ -34,7 +34,7 @@ permalink: /gallery/
                 </div>
 
                 <div class="modal-body">
-                    <img src="{{ file.path }}" alt="{{ filename }}" class="w-100">
+                    <img loading="lazy" src="{{ file.path }}" alt="{{ filename }}" class="w-100">
                 </div>
                 <div class="modal-footer">
 
